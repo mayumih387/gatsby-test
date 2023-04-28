@@ -1,0 +1,104 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "default",
+      "pageBundle": false,
+      "previewPath": null,
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Publishing date",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "Content preview",
+          "name": "preview",
+          "type": "image"
+        },
+        {
+          "title": "Is in draft",
+          "name": "draft",
+          "type": "draft"
+        },
+        {
+          "title": "Tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "Categories",
+          "name": "categories",
+          "type": "categories"
+        }
+      ]
+    }
+  ],
+  "frontMatter.framework.id": "gatsby",
+  "frontMatter.content.publicFolder": "src/images/",
+  "frontMatter.preview.host": "http://localhost:8000",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "content",
+      "path": "[[workspace]]/src/content"
+    }
+  ],
+  "frontMatter.data.files": [
+    {
+      "id": "categories",
+      "title": "Categories",
+      "file": "[[workspace]]/data/category.json",
+      "fileType": "json",
+      "labelField": "name",
+      "schema": {
+        "title": "Category",
+        "type": "object",
+        "required": ["slug", "name"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "slug": {
+            "type": "string",
+            "title": "Slug"
+          }
+        }
+      }
+    },
+    {
+      "id": "tags",
+      "title": "Tags",
+      "file": "[[workspace]]/data/tag.json",
+      "fileType": "json",
+      "labelField": "name",
+      "schema": {
+        "title": "Tag",
+        "type": "object",
+        "required": ["slug", "name"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "slug": {
+            "type": "string",
+            "title": "Slug"
+          }
+        }
+      }
+    }
+  ]
+}
